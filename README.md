@@ -42,4 +42,32 @@ A list can be recursively defined as either
 
 #### Abstract List Functions
 
-**Abstract List Functions**
+`build_list(n, proc)`
+- takes a non-negative integer, n, and a procedure, proc
+- returns a list of n elements where each element is proc(i) and i = 0, 1, ..., n
+- O(n) * O(proc) where O(proc) is the time complexity of proc
+
+`map(proc, lst)`
+- takes a procedure, proc, and a list, lst
+- returns a list where proc is applied to each element of lst
+- O(length(lst)) * O(proc) where O(proc) is the time complexity of proc
+
+`filter(pred, lst)`
+- takes a predicate, pred, and a list, lst
+- returns a list of the elements of lst for which pred is true
+- O(length(lst)) * O(pred) where O(pred) is the time complexity of pred
+
+`foldl(proc, init, lst)`
+- takes a procedure, proc; initial value, init; and a list, lst
+- returns the elements of lst combined by proc starting with init from left to right in the list
+- O(length(lst)) * O(proc) where O(proc) is the time complexity of proc
+
+`foldr(proc, init, lst)`
+- takes a procedure, proc; initial value, init; and a list, lst
+- returns the elements of lst combined by proc starting with init from right to left in the list
+- O(length(lst)) * O(proc) where O(proc) is the time complexity of proc
+
+`sort(lst, to_strict)` O(nlog(n))
+- takes a list, lst, and a strict total order, to_strict
+- returns a list with the elements of lst sorted in non-decresing order according to to_strict
+- O(nlog(n)) * O(to_strict) where O(to_strict) is the time complexity of to_struct
