@@ -17,7 +17,9 @@ A list can be recursively defined as either
 
 #### Primitive Operations
 
-|Function           |Input                           |Output                                |Time complexity |
+*Note: in the time complexities, n = length(lst)*
+
+|Function           |Input                           |Output                                |Time Complexity |
 |-------------------|--------------------------------|--------------------------------------|----------------|
 |`cons(elem, lst)`  |elem is anything; lst is a list |a list with elem at the head          |O(1)            |
 |`car(lst)`         |lst is a list                   |the element at the head of lst        |O(1)            |
@@ -27,10 +29,14 @@ A list can be recursively defined as either
 
 
 #### More Operations
-|Function
-|
-|
-|
-|
-|
-|
+|Function            |Input                                 |Output                                 |Time Complexity |
+|--------------------|--------------------------------------|---------------------------------------|----------------|
+|`is_list(lst)`      |lst is anything                       |true if lst is a list; false otherwise |O(1)            |
+|`show(lst)`         |lst is a list                         |prints the list                        |O(n)            |
+|`length(lst)`       |lst is a list                         |length of lst                          |O(n)            |
+|`reverse(lst)`      |lst is a list                         |lst in reverse order                   |O(n)            |
+|`list_ref(lst, i)`  |lst is a list; i is a natural number  |the i-th element of lst (zero indexed) |O(i)            |
+|`append(lst1, lst2)`|lst1 and lst2 are lists               |lst1 and lst2 joined maintaining order |O(length(lst1)) |
+|`take(lst, num)`    |lst is a list num is a natural number |the first num elements of lst          |O(num)          |
+|`drop(lst, num)`    |lst is a list num is a natural number |lst without the first num elements     |O(num)          |
+
