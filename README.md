@@ -35,8 +35,8 @@ A list can be recursively defined as either
 |`show(lst)`         |lst is a list                         |prints the list                        |O(n)            |
 |`length(lst)`       |lst is a list                         |length of lst                          |O(n)            |
 |`reverse(lst)`      |lst is a list                         |lst in reverse order                   |O(n)            |
-|`list_ref(lst, i)`  |lst is a list; i>=0 is an integer     |the i-th element of lst                |O(i)            |
+|`list_ref(lst, i)`  |lst is a list; i is a number          |the i-th element of lst                |O(i)            |
 |`append(lst1, lst2)`|lst1 and lst2 are lists               |lst1 and lst2 joined keeping order     |O(length(lst1)) |
-|`take(lst, num)`    |lst is a list num>=0 is an integer    |the first num elements of lst          |O(num)          |
-|`drop(lst, num)`    |lst is a list num>=0 is an integer    |lst without the first num elements     |O(num)          |
+|`take(lst, num)`    |lst is a list num is a number         |the first num elements of lst          |O(num)          |
+|`drop(lst, num)`    |lst is a list num is a number         |lst without the first num elements     |O(num)          |
 
