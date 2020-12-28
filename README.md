@@ -31,7 +31,7 @@ A list can be recursively defined as either
 #### More Operations
 |Function            |Input                                 |Output                                 |Time Complexity |
 |--------------------|--------------------------------------|---------------------------------------|----------------|
-|`is_list(lst)`      |lst is anything                       |true if lst is a list; else, false     |O(1)            |
+|`is_list(lst)`      |lst is anything                       |true if lst is a list; false otherwise |O(1)            |
 |`show(lst)`         |lst is a list                         |prints the list                        |O(n)            |
 |`length(lst)`       |lst is a list                         |length of lst                          |O(n)            |
 |`reverse(lst)`      |lst is a list                         |lst in reverse order                   |O(n)            |
