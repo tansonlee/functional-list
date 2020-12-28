@@ -40,3 +40,6 @@ A list can be recursively defined as either
 |`take(lst, num)`    |lst is a list num is a number         |the first num elements of lst          |O(num)          |
 |`drop(lst, num)`    |lst is a list num is a number         |lst without the first num elements     |O(num)          |
 
+#### Abstract List Functions
+
+**Abstract List Functions**
