@@ -15,9 +15,9 @@ A list can be recursively defined as either
 
 ## List of Functions
 
-#### Primitive Operations
-
 *Note: in the time complexities, n = length(lst)*
+
+#### Primitive Operations
 
 |Function           |Input                           |Output                                |Time Complexity |
 |-------------------|--------------------------------|--------------------------------------|----------------|
