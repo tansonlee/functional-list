@@ -5,6 +5,15 @@
 ## Table of Conents
 1. [Introduction](#introduction)
 2. [List of Functions](#list-of-functions)
+	- [Primitive Operations](#primitive-operations)
+	- [More Operatioins](#more-operations)
+	- [Abstract List Functions](#abstract-list-functions)
+	- [Sort](#sort)
+3. [Examples](#Examples)
+	- [Primitive Operations](#primitive-operations)
+	- [More Operatioins](#more-operations)
+	- [Abstract List Functions](#abstract-list-functions)
+	- [Sort](#sort) 
 
 ## Introduction
 
@@ -67,7 +76,108 @@ A list can be recursively defined as either
 - returns the elements of lst combined by proc starting with init from right to left in the list
 - O(length(lst)) * O(proc) where O(proc) is the time complexity of proc
 
-`sort(lst, to_strict)` O(nlog(n))
+#### Sort
+
+`sort(lst, to_strict)`
 - takes a list, lst, and a strict total order, to_strict
 - returns a list with the elements of lst sorted in non-decresing order according to to_strict
 - O(nlog(n)) * O(to_strict) where O(to_strict) is the time complexity of to_strict
+
+## Examples
+
+#### Primitive Operations
+
+```python
+from list import *
+
+a = cons(10, cons(100, cons(1000, empty)))
+
+show(a) 
+# prints '(10 100 1000)
+
+print(is_empty(a))
+# prints False
+
+print(car(a))
+# prints 10
+
+show(cdr(a))
+# prints '(100 1000)
+```
+
+#### More Operations
+
+```python
+from list import *
+
+a = cons(10, cons(100, cons(1000, empty)))
+b = cons(20, cons(200, cons(2000, empty)))
+c = append(a, b)
+
+show(c)
+# prints '(10 100 1000 20 200 2000)
+
+show(reverse(c))
+# prints '(2000 200 20 1000 100 10)
+
+print(list_ref(c, 2))
+# prints 1000
+
+show(take(c, 4))
+# prints '(10 100 1000 20)
+
+show(drop(c, 2))
+# prints '(1000 20 200 2000)
+```
+
+#### Abstract List Functions
+
+```python
+from list import *
+
+a = build_list(10, lambda x : x + 1)
+
+show(a)
+# prints '(1 2 3 4 5 6 7 8 9 10)
+
+b = map(lambda x : x + 10, a)
+
+show(b)
+# prints '(11 12 13 14 15 16 17 18 19 20)
+
+from math import sqrt
+def is_prime(n):
+	if n <= 1: return False
+	if n == 2: return True
+	for i in range(2, int(sqrt(n)) + 1):
+		if n % i == 0:
+			return False
+	return True
+
+c = filter(is_prime, b)
+show(c)
+# prints '(11 13 17 19)
+
+d = foldl(lambda x, y : x + y, 0, c)
+print(d)
+# prints 60  ## because 60 = 0 + 11 + 13 + 17 + 19
+```
+
+#### Sort
+
+```python
+from list import *
+from random import randint
+
+a = build_list(10, lambda x : randint(1, 10))
+
+show(a)
+# prints a list of 10 random numbers from [1, 10]
+# for example, '(6 9 2 4 2 1 10 1 1 6)
+
+b = sort(a, lambda x, y : x < y)
+
+show(b)
+# prints the list a in non-decreasing order
+# for example, '(1 1 1 2 2 4 6 6 9 10)
+```
