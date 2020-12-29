@@ -10,10 +10,10 @@
 	- [Abstract List Functions](#abstract-list-functions)
 	- [Sort](#sort)
 3. [Examples](#Examples)
-	- [Primitive Operations](#primitive-operations)
-	- [More Operatioins](#more-operations)
-	- [Abstract List Functions](#abstract-list-functions)
-	- [Sort](#sort) 
+	- [Primitive Operations](#primitive-operations-1)
+	- [More Operatioins](#more-operations-1)
+	- [Abstract List Functions](#abstract-list-functions-1)
+	- [Sort](#sort-1) 
 
 ## Introduction
 
