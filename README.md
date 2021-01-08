@@ -189,6 +189,6 @@ show(b)
 
 1. Follow this link to the online editor: [Functional List](https://repl.it/@TansonL/functional-list)
 
-2. Replace the example in main.py with your program.
+2. Replace the example in main.py with your program. You may need to create an account to modify the code.
 
 3. Run the program by clicking the green Run button.
