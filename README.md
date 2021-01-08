@@ -2,6 +2,8 @@
 
 ### An implementation of a functional list structure in Python using Functional Programming
 
+You can use this implementation online using repl.it here: [Functional List](https://repl.it/@TansonL/functional-list)
+
 ## Table of Conents
 1. [Introduction](#introduction)
 2. [List of Functions](#list-of-functions)
@@ -14,6 +16,7 @@
 	- [More Operatioins](#more-operations-1)
 	- [Abstract List Functions](#abstract-list-functions-1)
 	- [Sort](#sort-1) 
+4. [How to Use](#how-to-use)
 
 ## Introduction
 
@@ -181,3 +184,11 @@ show(b)
 # prints the list a in non-decreasing order
 # for example, '(1 1 1 2 2 4 6 6 9 10)
 ```
+
+## How to Use
+
+1. Follow this link to the online editor: [Functional List](https://repl.it/@TansonL/functional-list)
+
+2. Replace the example in main.py with your program.
+
+3. Run the program by clicking the green Run button.
